@@ -17,7 +17,7 @@ public class Song {
 		/**
 		 * @param interpret String
 		 * @param titel String
-		 * @param lanegeInSekunden String
+		 * @param lanegeInSekunden long
 		 */
 
 		this.setInterpret(interpret);
@@ -28,24 +28,20 @@ public class Song {
 	public Song (String titel, long laengeInSekunden) {
 		/**
 		 * @param titel String
-		 * @param lanegeInSekunden String
+		 * @param lanegeInSekunden long
 		 */
 
-		this.setInterpret("Unbekannter Künstler");
-		this.setTitel(titel);
-		this.setLaengeInSekunden(laengeInSekunden);
+		this("Unbekannter Künstler", titel, laengeInSekunden);
 	}	
 	
 
 	public Song (String titel, int stunden, int minuten, int sekunden) {
 		/**
 		 * @param titel String
-		 * @param lanegeInSekunden String
+		 * @param lanegeInSekunden long
 		 */
 
-		this.setInterpret("Unbekannter Künstler");
-		this.setTitel(titel);
-		this.setLaengeInSekunden(stunden * 3600 + minuten * 60 + sekunden);
+		this("Unbekannter Künstler", titel, stunden * 3600 + minuten * 60 + sekunden);
 	}
 	
 	
