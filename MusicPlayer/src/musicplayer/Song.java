@@ -25,6 +25,30 @@ public class Song {
 		this.setLaengeInSekunden(laengeInSekunden);
 	}
 
+	public Song (String titel, long laengeInSekunden) {
+		/**
+		 * @param titel String
+		 * @param lanegeInSekunden String
+		 */
+
+		this.setInterpret("Unbekannter Künstler");
+		this.setTitel(titel);
+		this.setLaengeInSekunden(laengeInSekunden);
+	}	
+	
+
+	public Song (String titel, int stunden, int minuten, int sekunden) {
+		/**
+		 * @param titel String
+		 * @param lanegeInSekunden String
+		 */
+
+		this.setInterpret("Unbekannter Künstler");
+		this.setTitel(titel);
+		this.setLaengeInSekunden(stunden * 3600 + minuten * 60 + sekunden);
+	}
+	
+	
 	public void setInterpret(String interpret) {
 		if (interpret == null) {
 			throw new IllegalArgumentException ("Interpret ist null");
