@@ -1,7 +1,5 @@
 package JavaErbschaften;
 
-import java.io.*;
-
 public class Tier {
 
 	private String name;
@@ -14,24 +12,36 @@ public class Tier {
 	
 	public Tier(String name, int gewicht, char geschlecht) {
 	
-		this.name = name;
-		this.gewicht = gewicht;
+		this.setName(name);
+		this.setGewicht(gewicht);
 		
 		if ((geschlecht == MAENNLICH) || (geschlecht == WEIBLICH)) {
-			this.geschlecht = geschlecht;
+			this.setGeschlecht(geschlecht);
 		} else {
 			throw new IllegalArgumentException ("Geschlecht enthält nicht definierten Wert!");
 		}
 	}
 
+
+	public void setName(String name) {
+		this.name = name;
+	}
 	public String getName() {
 		return this.name;
+	}
+
+	public void setGewicht(int gewicht) {
+		this.gewicht = gewicht;
 	}
 	
 	public int getGewicht() {
 		return this.gewicht;
 	}
 
+	public void setGeschlecht(char geschlecht) {
+		this.geschlecht = geschlecht;
+	}
+	
 	public char getGeschlecht() {
 		return this.geschlecht;
 	}
@@ -62,7 +72,11 @@ public class Tier {
 		Dobermann myDobermann = new Dobermann("Töhle", 112, WEIBLICH);
 		myDobermann.druckeTier();
 
+		Dackel myDackel2 = new Dackel(211);
+		myDackel2.druckeTier();
 		
+		Dobermann myDobermann2 = new Dobermann(212);
+		myDobermann2.druckeTier();
 	}
 
 }
